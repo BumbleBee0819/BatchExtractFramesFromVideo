@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Oct 11 18:06:20 2017
-@author: wb1918a
+@author: wenyan bi
 """
 
 import cv2
