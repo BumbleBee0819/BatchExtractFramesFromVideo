@@ -13,13 +13,14 @@ print(cv2.__version__)
 start_vid_index = 1
 end_vid_index = 44
 
+curDir = os.path.dirname(__file__)
 
 for i in range(start_vid_index, end_vid_index):
     # vid names
-    filename = 'vid_' + str(i) + '.mov'
+    filename = curDir + '/' + 'vid_' + str(i) + '.mov'
 
     # save paths
-    path = os.getcwd() + '/' + 'vid_' + str(i)
+    path = curDir + '/' + 'vid_' + str(i)
     if not os.path.exists(path):
         os.makedirs(path)
 
@@ -35,4 +36,3 @@ for i in range(start_vid_index, end_vid_index):
         
         cv2.imwrite(os.path.join(path, "frame%d.jpg" % count), image)     # save frame as JPEG file
         count += 1
-		
